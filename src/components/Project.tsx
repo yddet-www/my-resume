@@ -1,17 +1,46 @@
-import { project_list } from "../util/contents";
+import { project_list, snapshot_list } from "../util/contents";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
+const responsive = {
+  xl: {
+    breakpoint: { max: 4000, min: 1361 },
+    items: 1,
+    partialVisibilityGutter: 480,
+  },
+  lg: {
+    breakpoint: { max: 1360, min: 1181 },
+    items: 1,
+    partialVisibilityGutter: 280,
+  },
+  md: {
+    breakpoint: { max: 1180, min: 1001 },
+    items: 1,
+    partialVisibilityGutter: 160,
+  },
+  sm: {
+    breakpoint: { max: 1000, min: 901 },
+    items: 1,
+    partialVisibilityGutter: 80,
+  },
+  xs: {
+    breakpoint: { max: 900, min: 0 },
+    items: 1,
+  },
+};
 
 export default function Project() {
   return (
     <>
       <section>
-        <h2>Projects</h2>
-        <div className="flex flex-wrap gap-4">
+        <h2 className="mb-2 text-center">Projects</h2>
+        <div className="flex flex-wrap gap-4 place-content-center">
           {project_list.map((project) => {
             return (
               <div
-                key={project.href}
-                className="bg-white w-md rounded-md px-4 py-2 flex flex-col shadow-[0_4px_6px_rgba(0,0,0,0.10),inset_0_0_6px_rgba(0,0,0,0)]
-                hover:shadow-[0_4px_6px_rgba(0,0,0,0),inset_0_0_6px_rgba(0,0,0,0.10)] hover:scale-98
+                key={project.title}
+                className="bg-white max-w-md rounded-md p-4 flex flex-col shadow-[0_4px_4px_rgba(0,0,0,0.05),inset_0_0_6px_rgba(0,0,0,0)]
+                hover:shadow-[0_4px_6px_rgba(0,0,0,0),inset_0_0_6px_rgba(0,0,0,0.10)] hover:scale-99
                 transition-all duration-300 ease-in-out"
               >
                 <h3 className="leading-6">
@@ -25,13 +54,14 @@ export default function Project() {
                     </>
                   )}
                 </h3>
-                <p className="font-mono text-sm my-1 w-sm text-balance">
+                <p className="font-mono text-sm my-1 max-w-sm text-balance">
                   [{project.technology.join(", ")}]
                 </p>
                 <p className="text-pretty mb-2">{project.desc}</p>
 
                 {project.href && (
                   <a
+                    target="_blank"
                     href={project.href}
                     className="ml-auto mt-auto font-mono inline-flex items-center gap-1"
                   >
@@ -57,6 +87,34 @@ export default function Project() {
               </div>
             );
           })}
+        </div>
+
+        <div className="relative">
+          <div
+            className="absolute size-full bg-black/10 mask-x-from-90% mask-y-from-90%"
+            aria-hidden
+          />
+          <Carousel
+            className="mt-16 mb-8 py-16 relative"
+            responsive={responsive}
+            partialVisible={true}
+            swipeable={true}
+            draggable={true}
+            infinite={true}
+            autoPlay={true}
+            autoPlaySpeed={3000}
+            removeArrowOnDeviceType={["xl", "lg", "md", "sm", "xs"]}
+          >
+            {snapshot_list.map((item) => {
+              return (
+                <img
+                  className="mx-auto object-cover object-center max-h-100 rounded-lg pointer-events-none"
+                  src={item.img_path}
+                  alt={item.alt}
+                />
+              );
+            })}
+          </Carousel>
         </div>
       </section>
     </>

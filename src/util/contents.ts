@@ -12,17 +12,17 @@ export type SkillObj = {
 };
 
 export type CarouselObj = {
-  href: string;
+  img_path: string;
   alt: string;
-}
+};
 
 export const project_list: ProjectObj[] = [
   {
-    title: "This website",
+    title: "This website!",
     sub_title: "Static website",
     technology: ["React + Vite", "Tailwind CSS"],
-    desc: "This website will serve to showcase my most up-to-date resume. Stay tuned for future updates!",
-    href: "#",
+    desc: "My website will serve to showcase my most up-to-date resume. Stay tuned for future updates!",
+    href: "https://github.com/yddet-www/my-resume",
   },
   {
     title: "IIT iGEM Tech Team Lead",
@@ -37,25 +37,25 @@ export const project_list: ProjectObj[] = [
       "Traefik",
     ],
     desc: "For the upcoming iGEM 2025 competition, I lead the club's 'Tech Team'. This entails developing the required wiki-page for the team, as well as deploying it both in iGEM's GitLab and IIT's server. The latter lead to the integration of a RAG-based chatbot (credit to Atishay Jain) as well as its backend-to-frontend integration using Traefik.",
-    href: "#",
+    href: "https://igem.iit.edu/iitchicago/",
   },
   {
     title: "YouTify",
     sub_title: "Spotify to YouTube playlist converter",
     technology: ["Flutter", "SQLite", "YouTube Data API v3", "Spotify Web API"],
     desc: "As a final course project and a long-lasting whim of having two platforms hosting my song playlist, I created a mobile app to do exactly that by copying my Spotify playlist onto YouTube.",
-    href: "#",
+    href: "https://github.com/yddet-www/youtify",
   },
   {
     title: "Housing Teller",
     sub_title: "Housing price prediction model ",
     technology: ["Python", "LightGBM", "scikit-learn", "Flask"],
     desc: "Another course project where we were tasked to create a ML model. I created a prototype model predicting the housing price within Chicago with real data gathered from Cook County and Chicago Health Atlas. The model had an R² of 0.75 and RMSE of $85K (38%) after performing Bayesian hyperparameter optimization.",
-    href: "#",
+    href: "https://github.com/Team-2-CS-484/housing-teller",
   },
   {
     title: "Weather App",
-    sub_title: "Python-based weather tracking application",
+    sub_title: "Python-based weather forecasting application",
     technology: [
       "Python",
       "Tkinter",
@@ -64,7 +64,7 @@ export const project_list: ProjectObj[] = [
       "Geocode API",
     ],
     desc: "Another final course project; I created a rudimentary weather tracking application using Python, utilizing Tkinter for GUI. The application is backed with a MySQL database to store past weather reports queried by the user.",
-    href: "#",
+    href: "https://github.com/yddet-www/weather-app",
   },
 ];
 
@@ -99,14 +99,33 @@ export const skill_list: SkillObj[] = [
 ];
 
 export const coursework_list: string[] = [
-  "Mobile Applications Development",
-  "Software Engineering I",
-  "Database Organization",
-  "Programming Language & Translators",
-  "Introduction to Algorithms",
-  "Operating Systems",
-  "Introduction to Parallel and Distributed Computing",
-  "Economics of Capital Investments",
-  "Linear Optimization",
   "Probability",
+  "Operating Systems",
+  "Linear Optimization",
+  "Database Organization",
+  "Software Engineering I",
+  "Introduction to Algorithms",
+  "Mobile Applications Development",
+  "Introduction to Machine Learning",
+  "Economics of Capital Investments",
+  "Programming Language & Translators",
+  "Programming Paradigms and Patterns",
+  "Introduction to Artificial Intelligence",
+  "Introduction to Parallel and Distributed Computing",
+];
+
+export const snapshot_list: CarouselObj[] = [
+  { img_path: "/assets/snapshots/my-resume-ss.png", alt: "My website!" },
+  {
+    img_path: "/assets/snapshots/igem-iit-ss.png",
+    alt: "Our iGEM team's wikipage",
+  },
+  {
+    img_path: "/assets/snapshots/housing-teller-ss2.png",
+    alt: "Our housing prediction tool ",
+  },
+  {
+    img_path: "/assets/snapshots/youtify-ss.png",
+    alt: "The Spotify-to-YouTube playlist converter, YouTify",
+  },
 ];

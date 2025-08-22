@@ -5,33 +5,36 @@
   --breakpoint-xs: 30rem;
   --color-background: #fffffc;
   --color-base: #170f11;
-  --color-primary: #4062bb;
-  --color-secondary: #f45b69;
-  --color-accent: #59c3c3;
 }
 
 @layer base {
-  main {
-    @apply px-4 py-2;
+  section {
+    @apply mx-4 mt-2 mb-4;
   }
   h1 {
     font-size: var(--text-3xl);
     font-weight: var(--font-weight-semibold);
+    @apply text-green-900
   }
   h2 {
     font-size: var(--text-2xl);
     font-weight: var(--font-weight-semibold);
+    @apply text-green-900;
   }
   h3 {
-    font-size: var(--text-xl);
+    font-size: var(--text-lg);
     font-weight: var(--font-weight-semibold);
+    @apply text-green-900;
   }
   p {
     @apply max-w-2xl;
   }
+  a {
+    @apply text-purple-950 underline
+  }
 }
 
-body {
+html {
   background: var(--color-background);
   color: var(--color-base);
 }

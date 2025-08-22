@@ -1,13 +1,16 @@
 export default function Timeline() {
+  const hr_style = "bg-lime-800";
+  const svg_style = "size-5 stroke-lime-800";
+
   return (
     <>
       <section>
-        <h2>Experiences</h2>
-        <ol className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical pb-10">
+        <h2 className="text-center mb-2">Experiences</h2>
+        <ol className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical pb-10 text-balance">
           <li>
             <div className="timeline-middle">
               <svg
-                className="size-5"
+                className={svg_style}
                 data-slot="icon"
                 aria-hidden="true"
                 fill="none"
@@ -25,9 +28,9 @@ export default function Timeline() {
             </div>
             <div className="timeline-end md:mb-10">
               <time className="font-mono italic">AUG 2024 — PRESENT</time>
-              <div className="text-lg font-black">
+              <h3 className="text-lg font-black">
                 Tutor - Academic Resource Center
-              </div>
+              </h3>
               <p>
                 I provided tutoring support for undergraduate students in Data
                 Structures and Algorithms, offering both individualized guidance
@@ -41,14 +44,14 @@ export default function Timeline() {
                 encouraged academic success.
               </p>
             </div>
-            <hr />
+            <hr className={hr_style} />
           </li>
           <li>
-            <hr />
+            <hr className={hr_style} />
 
             <div className="timeline-middle">
               <svg
-                className="size-5"
+                className={svg_style}
                 data-slot="icon"
                 aria-hidden="true"
                 fill="none"
@@ -66,9 +69,9 @@ export default function Timeline() {
             </div>
             <div className="timeline-start mb-10 md:text-end">
               <time className="font-mono italic">AUG 2024 — DEC 2024</time>
-              <div className="text-lg font-black">
+              <h3 className="text-lg font-black">
                 Student Collaborator - Remote Telescope Project
-              </div>
+              </h3>
               <p>
                 I researched and implemented astronomical image processing
                 techniques in Python, applying modern practices to improve data

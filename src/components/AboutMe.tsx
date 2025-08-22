@@ -3,9 +3,9 @@ import { skill_list } from "../util/contents";
 export default function AboutMe() {
   return (
     <>
-      <section className="border-2 border-accent">
+      <section className="">
         <h2>About me</h2>
-        <div className="lg:flex lg:flex-row gap-6">
+        <div>
           <p className="text-balance">
             I'm a Computer Science student specializing in Distributed and Cloud
             Computing at the Illinois Institute of Technology. I love working on
@@ -17,15 +17,13 @@ export default function AboutMe() {
             check out my projects below or reach out if you'd like to
             collaborate!
           </p>
-          <div className="flex-none">
-            {skill_list.map((item) => {
+          <div className="mt-2">
+            {skill_list.map((item, index) => {
               return (
-                <>
-                  <p key={item.category}>
-                    <span className="font-semibold">{item.category}</span>:{" "}
-                    {item.skills.join(", ")}
-                  </p>
-                </>
+                <p key={index}>
+                  <span className="font-semibold">{item.category}</span>:{" "}
+                  {item.skills.join(", ")}
+                </p>
               );
             })}
           </div>
