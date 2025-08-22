@@ -1,3 +1,8 @@
+import resumeImg from "../assets/snapshots/my-resume-ss.png";
+import igemImg from "../assets/snapshots/igem-iit-ss.png";
+import housingImg from "../assets/snapshots/housing-teller-ss2.png";
+import youtifyImg from "../assets/snapshots/youtify-ss.png";
+
 export type ProjectObj = {
   title: string;
   sub_title?: string;
@@ -115,17 +120,11 @@ export const coursework_list: string[] = [
 ];
 
 export const snapshot_list: CarouselObj[] = [
-  { img_path: "/assets/snapshots/my-resume-ss.png", alt: "My website!" },
+  { img_path: resumeImg, alt: "My website!" },
+  { img_path: igemImg, alt: "Our iGEM team's wikipage" },
+  { img_path: housingImg, alt: "Our housing prediction tool" },
   {
-    img_path: "/assets/snapshots/igem-iit-ss.png",
-    alt: "Our iGEM team's wikipage",
-  },
-  {
-    img_path: "/assets/snapshots/housing-teller-ss2.png",
-    alt: "Our housing prediction tool ",
-  },
-  {
-    img_path: "/assets/snapshots/youtify-ss.png",
+    img_path: youtifyImg,
     alt: "The Spotify-to-YouTube playlist converter, YouTify",
   },
 ];
