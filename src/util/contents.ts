@@ -103,22 +103,6 @@ export const skill_list: SkillObj[] = [
   },
 ];
 
-export const coursework_list: string[] = [
-  "Probability",
-  "Operating Systems",
-  "Linear Optimization",
-  "Database Organization",
-  "Software Engineering I",
-  "Introduction to Algorithms",
-  "Mobile Applications Development",
-  "Introduction to Machine Learning",
-  "Economics of Capital Investments",
-  "Programming Language & Translators",
-  "Programming Paradigms and Patterns",
-  "Introduction to Artificial Intelligence",
-  "Introduction to Parallel and Distributed Computing",
-];
-
 export const snapshot_list: CarouselObj[] = [
   { img_path: resumeImg, alt: "My website!" },
   { img_path: igemImg, alt: "Our iGEM team's wikipage" },
